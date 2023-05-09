@@ -5,7 +5,7 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Commands", "Commands\Commands.csproj", "{C8ACBA63-C907-4DD1-8CA2-95CDCF2A58F7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandsDemo", "CommandsDemo\CommandsDemo.csproj", "{82F06AF2-751C-4A79-8C8B-2CE0A5321AD5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoCommands", "DemoCommands\DemoCommands.csproj", "{82F06AF2-751C-4A79-8C8B-2CE0A5321AD5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SpotifyCommands", "SpotifyCommands", "{C9CA01E8-BDAC-4006-8A29-097291349B06}"
 EndProject
