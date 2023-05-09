@@ -4,27 +4,27 @@ using System.Threading.Tasks;
 
 namespace Commands;
 
-public interface IReceiver
+public interface IJob
 {
     public IEnumerable<Command> Commands { get; }
-    public IAsyncEnumerable<Response> Execute();
+    public IAsyncEnumerable<Command> Execute();
 }
 
-public class Receiver : IReceiver
+public class Job : IJob
 {
-    public Receiver(IEnumerable<Command> commands)
+    public Job(IEnumerable<Command> commands)
     {
         Commands = commands;
     }
     
     public IEnumerable<Command> Commands { get; }
 
-    public virtual async IAsyncEnumerable<Response> Execute()
+    public async IAsyncEnumerable<Command> Execute()
     {
         foreach (var command in Commands)
         {
             command.Result = await command.Action();
-            yield return command.Result;
+            yield return command;
         }
     }
 }
