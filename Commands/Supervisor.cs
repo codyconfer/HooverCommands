@@ -14,21 +14,21 @@ public class Supervisor : ISupervisor
         Job = job;
     }
 
-    public virtual Job Job { get; }
+    public Job Job { get; }
     
     public async Task<Status> Run()
     {
         var commands = Job.Execute();
         await foreach(var command in commands)
             Console.WriteLine(command.Result);
-        var status = new Status(await commands.ToListAsync());
+        var status = new Status(Job.Id, await commands.ToListAsync());
         return status;
     }
 }
 
-public record Status(IEnumerable<Command> Commands)
+public record Status(Guid JobId, IEnumerable<Command> Commands)
 {
-    public bool Complete => Commands.All(x => x.Result != null);
-    public bool Error =>  Commands.Any(x => x.Result?.HasError ?? false);
+    public bool Complete => Commands.All(x => x.Result.IsComplete);
+    public bool Error =>  Commands.Any(x => x.Result.HasError);
     public bool Success =>  Complete && !Error;
 }
