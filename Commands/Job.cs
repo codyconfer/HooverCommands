@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-
 namespace Commands;
 
 public interface IJob
@@ -16,6 +12,8 @@ public class Job : IJob
     {
         Commands = commands;
     }
+
+    public Guid Id { get; } = Guid.NewGuid();
     
     public IEnumerable<Command> Commands { get; }
 
@@ -23,7 +21,14 @@ public class Job : IJob
     {
         foreach (var command in Commands)
         {
-            command.Result = await command.Action();
+            try
+            {
+                command.Result = await command.Action();
+            }
+            catch (Exception e)
+            {
+                command.Result = new FailedResult($"Uncaught error in job {Id} | command {command.Id}", e);
+            }
             yield return command;
         }
     }
