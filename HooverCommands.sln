@@ -7,11 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Commands", "Commands\Comman
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoCommands", "DemoCommands\DemoCommands.csproj", "{82F06AF2-751C-4A79-8C8B-2CE0A5321AD5}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SpotifyCommands", "SpotifyCommands", "{C9CA01E8-BDAC-4006-8A29-097291349B06}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpotifyAggregator", "SpotifyCommands\SpotifyAggregator\SpotifyAggregator.csproj", "{C3D1A1A5-5A3A-452A-B2E5-F80E0747BAB2}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpotifyAuthenticator", "SpotifyCommands\SpotifyAuthenticator\SpotifyAuthenticator.csproj", "{949C72D4-902F-4FF0-B719-4979CCA4309E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpotifyCommands", "SpotifyCommands\SpotifyCommands.csproj", "{64042299-FD96-4924-B12C-C35C0616E673}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,17 +26,11 @@ Global
 		{82F06AF2-751C-4A79-8C8B-2CE0A5321AD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{82F06AF2-751C-4A79-8C8B-2CE0A5321AD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{82F06AF2-751C-4A79-8C8B-2CE0A5321AD5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C3D1A1A5-5A3A-452A-B2E5-F80E0747BAB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C3D1A1A5-5A3A-452A-B2E5-F80E0747BAB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C3D1A1A5-5A3A-452A-B2E5-F80E0747BAB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C3D1A1A5-5A3A-452A-B2E5-F80E0747BAB2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{949C72D4-902F-4FF0-B719-4979CCA4309E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{949C72D4-902F-4FF0-B719-4979CCA4309E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{949C72D4-902F-4FF0-B719-4979CCA4309E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{949C72D4-902F-4FF0-B719-4979CCA4309E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64042299-FD96-4924-B12C-C35C0616E673}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64042299-FD96-4924-B12C-C35C0616E673}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64042299-FD96-4924-B12C-C35C0616E673}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64042299-FD96-4924-B12C-C35C0616E673}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{C3D1A1A5-5A3A-452A-B2E5-F80E0747BAB2} = {C9CA01E8-BDAC-4006-8A29-097291349B06}
-		{949C72D4-902F-4FF0-B719-4979CCA4309E} = {C9CA01E8-BDAC-4006-8A29-097291349B06}
 	EndGlobalSection
 EndGlobal

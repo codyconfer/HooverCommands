@@ -11,15 +11,21 @@ public enum DemoCommandNames
 public static class DemoCommandLibrary
 {
     public static CommandLibrary<DemoCommandNames> Lookup =>
-        new CommandLibrary<DemoCommandNames>
+        new()
         {
             {
                 DemoCommandNames.ActionOne,
-                new (() => Task.FromResult(new Result("Testing Action One")))
+                new Command("Testing Action One")
             },
             {
                 DemoCommandNames.ActionTwo,
-                new (() => Task.FromResult(new Result("Testing Action Two")))
+                new Command("Testing Action Two")
             },
         };
+
+    public static IEnumerable<Command> DemoSet => new List<Command>
+    {
+        Lookup[DemoCommandNames.ActionOne],
+        Lookup[DemoCommandNames.ActionTwo]
+    };
 }
